@@ -1,0 +1,53 @@
+problem_name: Message_Passing
+cd /Users/zhaoyuwei/Desktop/LLM_on_ASAC/program/; g++ -std=c++17 "Message_Passing.cpp" -o "Message_Passing"
+
+test 1
+output: 1
+answer: 3
+false
+
+test 2
+output: 2
+answer: 15
+false
+
+test 3
+output: 4
+answer: 20
+false
+
+test 4
+output: 5
+answer: 100
+false
+
+test 5
+output: 1
+answer: 1234
+false
+
+test 6
+output: 2
+answer: 1000
+false
+
+test 7
+output: 6
+answer: 500
+false
+
+test 8
+output: 1
+answer: 49999
+false
+
+test 9
+output: 19
+answer: 20
+false
+
+
+test_num: 10
+correct_num: 0
+
+
