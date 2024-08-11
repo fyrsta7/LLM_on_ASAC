@@ -1,40 +1,54 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include <map>
+#include <string>
+#include <unordered_map>
 
 using namespace std;
 
-int main() {
-    int n;
-    cin >> n;
-    
-    string s1, s2, sum;
-    cin >> s1 >> s2 >> sum;
-    
-    map<char, int> mp;
-    vector<int> num(n);
-    string all = s1 + s2 + sum;
-    sort(all.begin(), all.end());
-    all.erase(unique(all.begin(), all.end()), all.end());
-    
-    for (int i = 0; i < n; ++i) {
-        mp[all[i]] = i;
-    }
-    
+int n;
+string first, second, result;
+vector<int> mapping(26, -1);
+vector<bool> used;
+
+bool is_valid() {
     int carry = 0;
-    for (int i = n-1; i >= 0; --i) {
-        int x = mp[s1[i]];
-        int y = mp[s2[i]];
-        int z = mp[sum[i]];
-        int temp = x + y + carry;
-        num[i] = temp % n;
-        carry = temp / n;
+    for (int i = n - 1; i >= 0; --i) {
+        int val1 = mapping[first[i] - 'A'];
+        int val2 = mapping[second[i] - 'A'];
+        int res = mapping[result[i] - 'A'];
+        if ((val1 + val2 + carry) % n != res) return false;
+        carry = (val1 + val2 + carry) / n;
     }
-    
+    return carry == 0;
+}
+
+bool solve(int idx) {
+    if (idx == n) return is_valid();
+
     for (int i = 0; i < n; ++i) {
-        cout << num[i] << " ";
+        if (!used[i]) {
+            used[i] = true;
+            mapping[idx] = i;
+            if (solve(idx + 1)) return true;
+            used[i] = false;
+            mapping[idx] = -1;
+        }
     }
-    
+    return false;
+}
+
+int main() {
+    cin >> n;
+    cin >> first >> second >> result;
+
+    used.resize(n, false);
+
+    solve(0);
+
+    for (int i = 0; i < n; ++i) {
+        cout << mapping[i] << " ";
+    }
+    cout << endl;
+
     return 0;
 }

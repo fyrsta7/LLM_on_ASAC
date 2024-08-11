@@ -1,30 +1,37 @@
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 using namespace std;
 
 int main() {
     int n;
     cin >> n;
+    vector<int> d(n);
+    
+    for (int i = 0; i < n; i++)
+        cin >> d[i];
 
-    vector<int> depths(n);
-    for (int i = 0; i < n; i++) {
-        cin >> depths[i];
+    int total_days = 0;
+
+    while (true) {
+        int i = 0;
+        while (i < n && d[i] == 0)
+            i++;
+        if (i == n)
+            break;
+
+        int min_depth = INT_MAX;
+        while (i < n && d[i] > 0) {
+            min_depth = min(min_depth, d[i]);
+            i++;
+        }
+
+        total_days += min_depth;
+        for (int j = 0; j < n; j++) {
+            if (d[j] > 0) d[j] -= min_depth;
+        }
     }
 
-    int days = 0;
-    vector<int> prefixSum(n + 1, 0);
-
-    for (int i = 0; i < n; i++) {
-        prefixSum[i + 1] = prefixSum[i] + depths[i];
-    }
-
-    for (int i = 0; i < n; i++) {
-        int remainingDepth = prefixSum[n] - prefixSum[i + 1];
-        days += remainingDepth - depths[i];
-    }
-
-    cout << days << endl;
-
+    cout << total_days << endl;
     return 0;
 }

@@ -1,26 +1,25 @@
 #include <iostream>
+using namespace std;
 
-int countOccurrencesOfTwo(int n) {
+int countDigitTwo(int L, int R) {
     int count = 0;
-    while (n > 0) {
-        if (n % 10 == 2) {
-            count++;
+
+    for (int i = L; i <= R; ++i) {
+        int num = i;
+        while (num > 0) {
+            if (num % 10 == 2) {
+                count++;
+            }
+            num /= 10;
         }
-        n /= 10;
     }
+
     return count;
 }
 
 int main() {
     int L, R;
-    std::cin >> L >> R;
-    
-    int count = 0;
-    for (int i = L; i <= R; i++) {
-        count += countOccurrencesOfTwo(i);
-    }
-    
-    std::cout << count << std::endl;
-    
+    cin >> L >> R;
+    cout << countDigitTwo(L, R) << endl;
     return 0;
 }

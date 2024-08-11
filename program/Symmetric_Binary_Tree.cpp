@@ -1,52 +1,60 @@
 #include <iostream>
-#include <unordered_map>
+#include <vector>
+#include <stack>
 
 using namespace std;
 
-struct Node {
+struct TreeNode {
     int val;
-    Node* left;
-    Node* right;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-bool isMirror(Node* t1, Node* t2) {
-    if(t1 == nullptr && t2 == nullptr) return true;
-    if(t1 == nullptr || t2 == nullptr) return false;
-    
-    return (t1->val == t2->val) && isMirror(t1->left, t2->right) && isMirror(t1->right, t2->left);
+bool isSymmetric(TreeNode* a, TreeNode* b) {
+    if (!a && !b) return true;
+    if (!a || !b) return false;
+    return (a->val == b->val) && isSymmetric(a->left, b->right) && isSymmetric(a->right, b->left);
 }
 
-int maxSymmetricSubtree(Node* root) {
-    unordered_map<Node*, int> subtreeSize;
-    
-    if(root == nullptr) return 0;
-    
-    if(isMirror(root->left, root->right)) {
-        return maxSymmetricSubtree(root->left) + maxSymmetricSubtree(root->right) + 1;
+int countNodes(TreeNode* root) {
+    if (!root) return 0;
+    return 1 + countNodes(root->left) + countNodes(root->right);
+}
+
+pair<int, bool> largestSymmetricSubtreeHelper(TreeNode* root) {
+    if (!root) return {0, true};
+
+    auto [leftSize, leftSym] = largestSymmetricSubtreeHelper(root->left);
+    auto [rightSize, rightSym] = largestSymmetricSubtreeHelper(root->right);
+
+    if (leftSym && rightSym && isSymmetric(root->left, root->right)) {
+        return {1 + leftSize + rightSize, true};
     }
-    
-    return max(maxSymmetricSubtree(root->left), maxSymmetricSubtree(root->right));
+    return {max(leftSize, rightSize), false};
+}
+
+int largestSymmetricSubtree(TreeNode* root) {
+    return largestSymmetricSubtreeHelper(root).first;
 }
 
 int main() {
     int n;
     cin >> n;
-    
-    Node* nodes[1000001];
-    
-    for(int i = 1; i <= n; i++) {
-        int val, left, right;
-        cin >> val >> left >> right;
-        
-        Node* newNode = new Node();
-        newNode->val = val;
-        newNode->left = (left == -1) ? nullptr : nodes[left];
-        newNode->right = (right == -1) ? nullptr : nodes[right];
-        
-        nodes[i] = newNode;
+    vector<int> values(n);
+    for (int i = 0; i < n; ++i) cin >> values[i];
+
+    vector<TreeNode*> nodes(n + 1);
+    for (int i = 1; i <= n; ++i) nodes[i] = new TreeNode(values[i - 1]);
+
+    for (int i = 1; i <= n; ++i) {
+        int left, right;
+        cin >> left >> right;
+        if (left != -1) nodes[i]->left = nodes[left];
+        if (right != -1) nodes[i]->right = nodes[right];
     }
-    
-    cout << maxSymmetricSubtree(nodes[1]) << endl;
-    
+
+    cout << largestSymmetricSubtree(nodes[1]) << endl;
+
     return 0;
 }

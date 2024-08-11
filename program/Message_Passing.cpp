@@ -1,37 +1,44 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
-
+#include <queue>
 using namespace std;
 
 int main() {
     int n;
     cin >> n;
 
-    vector<int> targets(n+1);
-    vector<bool> visited(n+1, false);
-
-    for(int i = 1; i <= n; i++) {
-        cin >> targets[i];
+    vector<int> T(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> T[i];
+        T[i]--;  // Convert to 0-based index
     }
 
-    int rounds = 0;
-    for(int i = 1; i <= n; i++) {
-        if(!visited[i]) {
-            int target = i;
-            vector<int> path;
-            while(!visited[target]) {
-                visited[target] = true;
-                path.push_back(target);
-                target = targets[target];
-            }
-            if(find(path.begin(), path.end(), target) != path.end()) {
-                rounds++;
-            }
+    vector<int> inDegree(n, 0);
+    for (int i = 0; i < n; ++i) {
+        inDegree[T[i]]++;
+    }
+
+    queue<int> q;
+    for (int i = 0; i < n; ++i) {
+        if (inDegree[i] == 0) {
+            q.push(i);
         }
     }
 
-    cout << rounds;
+    int rounds = 0;
+    while (!q.empty()) {
+        int qSize = q.size();
+        for (int i = 0; i < qSize; ++i) {
+            int curr = q.front();
+            q.pop();
+            int target = T[curr];
+            if (--inDegree[target] == 0) {
+                q.push(target);
+            }
+        }
+        rounds++;
+    }
 
+    cout << rounds - 1 << endl;
     return 0;
 }

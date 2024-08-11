@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 def check_first_line(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -35,3 +36,32 @@ def remove_last_line(file_path):
 
 def count_files_in_directory(directory_path):
     return len([f for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f))])
+
+def run_process_with_timeout(program, input_text, timeout):
+    try:
+        process = subprocess.Popen(
+            [program],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        
+        # Write input to the process's stdin
+        process.stdin.write(input_text + '\n')
+        process.stdin.flush()
+        
+        # Communicate with the process and set the timeout
+        stdout, stderr = process.communicate(timeout=timeout)
+        
+        return stdout, stderr
+    
+    except subprocess.TimeoutExpired as e:
+        # Handle the timeout situation
+        process.kill()  # Kill the process if it exceeds the timeout
+        stdout, stderr = process.communicate()  # Get the output and error streams
+        return None, f"Process timed out: {stderr}"
+    
+    except Exception as e:
+        # Handle any other exceptions
+        return None, str(e)

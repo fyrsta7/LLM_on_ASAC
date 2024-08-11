@@ -1,36 +1,35 @@
 #include <iostream>
+#include <vector>
 #include <queue>
-#include <functional>
-
 using namespace std;
 
 int main() {
     int n;
     cin >> n;
-
-    priority_queue<int, vector<int>, greater<int>> pq;
-
-    for (int i = 0; i < n; i++) {
-        int num;
-        cin >> num;
-        pq.push(num);
+    
+    priority_queue<int, vector<int>, greater<int>> minHeap;
+    
+    for(int i = 0; i < n; i++) {
+        int fruit;
+        cin >> fruit;
+        minHeap.push(fruit);
     }
-
-    long long cost = 0;
-
-    while (pq.size() > 1) {
-        int first = pq.top();
-        pq.pop();
-        int second = pq.top();
-        pq.pop();
+    
+    int totalEnergy = 0;
+    
+    while(minHeap.size() > 1) {
+        int pile1 = minHeap.top();
+        minHeap.pop();
+        int pile2 = minHeap.top();
+        minHeap.pop();
         
-        int sum = first + second;
-        cost += sum;
+        int mergeEnergy = pile1 + pile2;
+        totalEnergy += mergeEnergy;
         
-        pq.push(sum);
+        minHeap.push(mergeEnergy);
     }
-
-    cout << cost << endl;
-
+    
+    cout << totalEnergy << endl;
+    
     return 0;
 }

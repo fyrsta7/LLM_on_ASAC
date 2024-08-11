@@ -5,11 +5,13 @@ int main() {
     int n, m, k, x;
     cin >> n >> m >> k >> x;
 
-    for (int i = 0; i < k; i++) {
-        x = (x + m) % n;
+    long long rounds = 1;
+    for (int i = 0; i < k; ++i) {
+        rounds *= 10;
     }
 
-    cout << x << endl;
+    int final_position = (x + rounds * m) % n;
+    cout << final_position << endl;
 
     return 0;
 }

@@ -7,43 +7,48 @@ answer: 3
 false
 
 test 2
-output: 2
+output: 1
 answer: 15
 false
 
 test 3
-output: 4
+output: 0
 answer: 20
 false
 
 test 4
-output: 5
+output: 1
 answer: 100
 false
 
 test 5
-output: 1
+output: 4
 answer: 1234
 false
 
 test 6
-output: 2
+output: 1
 answer: 1000
 false
 
 test 7
-output: 6
+output: 3
 answer: 500
 false
 
 test 8
-output: 1
+output: 0
 answer: 49999
 false
 
 test 9
-output: 19
+output: 12
 answer: 20
+false
+
+test 10
+output: 5
+answer: 12345
 false
 
 
@@ -51,3 +56,64 @@ test_num: 10
 correct_num: 0
 
 
+problem_name: Statistics
+cd /Users/zhaoyuwei/Desktop/LLM_on_ASAC/program/; g++ -std=c++17 "Statistics.cpp" -o "Statistics"
+
+test 1
+output: 5
+answer: 5
+true
+
+test 2
+output: 20
+answer: 20
+true
+
+test 3
+output: 21
+answer: 21
+true
+
+test 4
+output: 300
+answer: 300
+true
+
+test 5
+output: 4
+answer: 4
+true
+
+test 6
+output: 7
+answer: 7
+true
+
+test 7
+output: 826
+answer: 826
+true
+
+test 8
+output: 3590
+answer: 3590
+true
+
+test 9
+output: 0
+answer: 0
+true
+
+test 10
+output: 4000
+answer: 4000
+true
+
+
+test_num: 10
+correct_num: 10
+
+
+There are 20 tests.
+It passes 10 tests.
+It passes all tests in 1 problems.

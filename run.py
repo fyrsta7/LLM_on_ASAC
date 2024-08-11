@@ -11,14 +11,15 @@ client = OpenAI(
 
 asac_path = "/Users/zhaoyuwei/Desktop/LLM_on_ASAC/ASAC/"
 program_folder_path = "/Users/zhaoyuwei/Desktop/LLM_on_ASAC/program/"
+timeout = 1
 prompt = "Here is an algorithm competition problem. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. Don't use the bits/stdc++.h library. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format."
 
-i = 0
+test_num_sum = 0
+correct_num_sum = 0
+pass_all_test_num = 0
 for d in os.listdir(asac_path):
-    if i > 5:
+    if pass_all_test_num > 0:
         break
-    i += 1
-
     original_name = d
     problem_name = d.replace(" ", "_")
     print("problem_name:", problem_name)
@@ -71,9 +72,10 @@ for d in os.listdir(asac_path):
     input_folder_path = test_path + "origin_form/"
     answer_folder_path = test_path + "ans/"
     test_num = util.count_files_in_directory(input_folder_path)
+    test_num_sum += test_num
     correct_num = 0
 
-    for i in range(1, test_num):
+    for i in range(1, test_num + 1):
         print("\ntest", i)
         test_index = i
 
@@ -84,17 +86,7 @@ for d in os.listdir(asac_path):
 
         # run program and get output
         program = program_folder_path + problem_name
-        process = subprocess.Popen(
-            [program],
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        process.stdin.write(input + '\n')
-        process.stdin.flush()
-        stdout, stderr = process.communicate()
-        # print('Output:', stdout)
+        stdout, stderr = util.run_process_with_timeout(program, input, timeout)
         if stderr:
             print('Run Error:', stderr)
             continue
@@ -117,7 +109,15 @@ for d in os.listdir(asac_path):
         else:
             print("false")
 
+    correct_num_sum += correct_num
+    if test_num == correct_num:
+        pass_all_test_num += 1
+    
     print("\n")
     print("test_num:", test_num)
     print("correct_num:", correct_num)
     print("\n")
+
+print("There are", test_num_sum, "tests.")
+print("It passes", correct_num_sum, "tests.")
+print("It passes all tests in", pass_all_test_num, "problems.")
