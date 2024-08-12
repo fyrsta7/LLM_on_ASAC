@@ -36,7 +36,7 @@ for d in os.listdir(asac_path):
                 "content": prompt + content,
             }
         ],
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
     )
 
     # get program
