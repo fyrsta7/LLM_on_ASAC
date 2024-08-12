@@ -55,5 +55,514 @@
     "Currency_System": {
         "test_num": 20,
         "correct_num": 0
-    }
+    },
+    "Who_got_the_most_scholarships": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Polynomial_Output": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "The_Station_Classification": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Shuffle": {
+        "test_num": 20,
+        "correct_num": 4
+    },
+    "Two_Stack_Sort": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Florist": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Souvenir": {
+        "test_num": 20,
+        "correct_num": 2
+    },
+    "The_Trees_Outside_the_Campus": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Parentheses_Tree": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Cultural_Journey": {
+        "test_num": 10,
+        "correct_num": 7
+    },
+    "Machining\u00a0Parts": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Passing_Notes": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Lay_the_carpet": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Abacus_Mental_Arithmetic_Test": {
+        "test_num": 10,
+        "correct_num": 3
+    },
+    "The_Center_of_Gravity_of_the_Tree": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Division": {
+        "test_num": 20,
+        "correct_num": 1
+    },
+    "Jinjin\u2019s_Savings_Plan": {
+        "test_num": 10,
+        "correct_num": 2
+    },
+    "The_Happy_Jinming": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Building_Block_Competition": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Prime_Factorization": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Harbor": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Number-Filling_Game": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Checkerboard": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Scholarship": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "The_Librarian": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Palindrome_Dates": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Gathering_herbs": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Counting_Numbers": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Jump_Rocks": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Defend_the_Kingdom": {
+        "test_num": 25,
+        "correct_num": 0
+    },
+    "Chorus_Formation": {
+        "test_num": 10,
+        "correct_num": 2
+    },
+    "Doudizhu": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Numbers_on_the_Tree": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "The_Number_Game": {
+        "test_num": 20,
+        "correct_num": 20
+    },
+    "ISBN_Number": {
+        "test_num": 10,
+        "correct_num": 2
+    },
+    "String_Expansion": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "2k_System_of_Numeration": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Epidemic_Control": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Campfire_Party": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Combinatorial\u00a0Number_Problem": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Track_Construction": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "The_Core_of_the_Tree_Network": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Solve_the_Equation": {
+        "test_num": 10,
+        "correct_num": 3
+    },
+    "King_Game": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Arrange_Seats": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Energy_Necklace": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Jam\u2019s_Counting_Method": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "The_Battle_Between_Dragon_and_Tiger": {
+        "test_num": 25,
+        "correct_num": 2
+    },
+    "Magic_Square": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Across_the_river": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "The_Vigene\u0300re_Code": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Gold_Coins": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Swiss_System": {
+        "test_num": 10,
+        "correct_num": 9
+    },
+    "Cell_Division": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Matchstick_Equation": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Tortoise_Chess": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Matrix_Number_Game": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Mine_Sweeper": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Martian": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Today\u2019s_Meal_at_Emiya\u2019s_House": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Love_Running_Every_Day": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Trucking": {
+        "test_num": 10,
+        "correct_num": 6
+    },
+    "Treasure_Hunt": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Score": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "The_Big_Bang_Theory_edition_Rock-Paper-Scissors_Game": {
+        "test_num": 10,
+        "correct_num": 3
+    },
+    "The_Three_Kingdom_Game": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Hanoi_Twin_Towers": {
+        "test_num": 10,
+        "correct_num": 5
+    },
+    "The_Unhappy_Jinjin": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Queuing_Matches": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Sum": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Machine_Translation": {
+        "test_num": 10,
+        "correct_num": 4
+    },
+    "Kat's_doubts": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Borrow_Classrooms": {
+        "test_num": 10,
+        "correct_num": 8
+    },
+    "Earthworms": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Submatrix": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "The_location_of_The_Wireless_Network_Transmitter": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Target-shaped_Sudoku": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Mingming\u2019s_Random_Number": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Sightseeing_bus": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Road_Game": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "The_Escape_of_the_Watchman": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Shipping_Plan": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Prisoners": {
+        "test_num": 10,
+        "correct_num": 6
+    },
+    "Find_the_Way": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "The_Salesman": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Stupid_Little_Monkey": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Peanut_Picking": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Numeration_Problem": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Digit_Reversal": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Gray_Code": {
+        "test_num": 20,
+        "correct_num": 19
+    },
+    "Circle": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Public_Transport_Transfer": {
+        "test_num": 20,
+        "correct_num": 6
+    },
+    "The_Game_of_Ball_Passing": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Souvenir_Grouping": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "The_smart_quality_supervisor": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Jinming\u2019s_Budget_Plan": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Missile_Interception": {
+        "test_num": 10,
+        "correct_num": 3
+    },
+    "Hankson\u2019s_Interesting_Question": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "The_Optimal_Trade": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "The_Value_of_Expression": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Simplifying_Proportion": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Title_Statistics": {
+        "test_num": 20,
+        "correct_num": 20
+    },
+    "Job_Scheduling_Plan": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Sequence": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Change_Classrooms": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Angry_Birds": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "The_Lurker": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Placing_Flowers": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Magic_Circle": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Toy_Puzzle": {
+        "test_num": 10,
+        "correct_num": 3
+    },
+    "Word_Count": {
+        "test_num": 10,
+        "correct_num": 2
+    },
+    "Receiving_Water": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Children\u2019s_Numbers": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Select_Inns": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Helix_Matrix": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Travel": {
+        "test_num": 25,
+        "correct_num": 0
+    },
+    "Taotao_Picking_Apple": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Congruence_Equation": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Calculate_the_coefficients": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Buying_Pencils": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Joint_Weights": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Delimit_the_Minimum_Passing_Score": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "test_num_sum": 1570,
+    "correct_num_sum": 488,
+    "pass_all_test_num": 34
 }

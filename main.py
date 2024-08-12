@@ -19,7 +19,7 @@ file_path = os.path.abspath(__file__)
 root_path = os.path.dirname(file_path)
 create_result_folder(root_path)
 result_folder_path = root_path + "/result/"
-cache_path = root_path + "/cache/gpt-4o-mini.json"
+cache_path = root_path + "/cache/gpt-4o.json"
 
 test_num_sum = 0
 correct_num_sum = 0

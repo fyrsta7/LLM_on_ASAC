@@ -1,0 +1,10 @@
+{
+    "Message_Passing": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Statistics": {
+        "test_num": 10,
+        "correct_num": 10
+    }
+}
