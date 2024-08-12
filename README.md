@@ -21,6 +21,11 @@
 
 需要提前下载 ASAC benchmark: https://github.com/AuQWQuA/ASAC
 
+需要安装 ChatGPT API 的库:
+```
+$ pip install openai
+```
+
 `result` 文件夹中若包含之前生成的结果，需要提前清空，避免之前测试的结果影响本次测试。
 
 运行前需要在 `config.py` 中补全的内容：

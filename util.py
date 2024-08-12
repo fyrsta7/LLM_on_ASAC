@@ -1,5 +1,7 @@
 import os
 import subprocess
+import time
+import threading
 
 def create_result_folder(root_path):
     command = 'cd ' + root_path + '; mkdir -p result'
@@ -27,26 +29,26 @@ def remove_first_line(file_path):
         file.writelines(lines[1:])
 
 def check_last_line(file_path):
-    with open(file_path, 'rb') as file:  # 以二进制模式打开，以处理可能的文件编码问题
-        file.seek(-1, 2)  # 移动到文件末尾的倒数第一个字节
-        while file.tell() > 0:  # 确保文件不是空的
+    with open(file_path, 'rb') as file:
+        file.seek(-1, 2)
+        while file.tell() > 0:
             byte = file.read(1)
-            if byte == b'\n':  # 找到最后一行的开始
+            if byte == b'\n':
                 break
-            file.seek(-2, 1)  # 移动到倒数第二个字节
-        last_line = file.readline().decode('utf-8').strip()  # 读取最后一行并解码
+            file.seek(-2, 1)
+        last_line = file.readline().decode('utf-8').strip()
         return last_line == "```"
 
 def remove_last_line(file_path):
-    with open(file_path, 'rb+') as file:  # 以二进制读写模式打开
-        file.seek(-1, 2)  # 移动到文件末尾的最后一个字节
-        while file.tell() > 0:  # 确保文件不是空的
+    with open(file_path, 'rb+') as file:
+        file.seek(-1, 2)
+        while file.tell() > 0:
             byte = file.read(1)
-            if byte == b'\n':  # 找到最后一行的开始
+            if byte == b'\n':
                 break
-            file.seek(-2, 1)  # 移动到倒数第二个字节
-        file.truncate()  # 删除最后一行
-        # 注意：truncate() 将文件截断到当前位置，即文件指针的位置
+            file.seek(-2, 1)
+        file.truncate()
+
 
 def compile_program(result_folder_path, problem_name, timeout):
     command = 'cd ' + result_folder_path + '; g++ -std=c++17 ' + problem_name + '.cpp' + ' -o ' + problem_name
@@ -63,13 +65,10 @@ def compile_program(result_folder_path, problem_name, timeout):
         return stderr
     
     except subprocess.TimeoutExpired as e:
-        # Handle the timeout situation
-        process.kill()  # Kill the process if it exceeds the timeout
-        # stdout, stderr = process.communicate()  # Get the output and error streams
+        process.kill()
         return "Process timed out"
     
     except Exception as e:
-        # Handle any other exceptions
         return str(e)
 
 
@@ -77,31 +76,44 @@ def count_files_in_directory(directory_path):
     return len([f for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f))])
 
 
-def run_process_with_timeout(program, input_text, timeout):
-    try:
-        process = subprocess.Popen(
-            [program],
-            stdin=subprocess.PIPE,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
-        
-        # Write input to the process's stdin
-        process.stdin.write(input_text + '\n')
-        process.stdin.flush()
-        
-        # Communicate with the process and set the timeout
-        stdout, stderr = process.communicate(timeout = timeout)
-        
-        return stdout, stderr
-    
-    except subprocess.TimeoutExpired as e:
-        # Handle the timeout situation
-        process.kill()  # Kill the process if it exceeds the timeout
-        # stdout, stderr = process.communicate()  # Get the output and error streams
-        return None, "Process timed out"
-    
-    except Exception as e:
-        # Handle any other exceptions
-        return None, str(e)
+class TimeoutError(Exception):
+    pass
+
+def run_with_timeout(func, args=(), kwargs={}, timeout=5):
+    result = [None]
+    exception = [None]
+
+    def target():
+        try:
+            result[0] = func(*args, **kwargs)
+        except Exception as e:
+            exception[0] = e
+
+    thread = threading.Thread(target=target)
+    thread.start()
+    thread.join(timeout)
+
+    if thread.is_alive():
+        thread.join(0)
+        raise TimeoutError("Function call timed out.")
+
+    if exception[0] is not None:
+        raise exception[0]
+
+    return result[0]
+
+
+def run_test(program, input_text):
+    start_time = time.time()
+
+    process = subprocess.Popen(
+        [program],
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+    )
+    process.stdin.write(input_text + '\n')
+    process.stdin.flush()
+    stdout, stderr = process.communicate()
+    return stdout, stderr
