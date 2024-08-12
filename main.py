@@ -94,6 +94,10 @@ for d in os.listdir(asac_path):
             print("Run Error: timed out")
             print("false")
             continue
+        except Exception as e:
+            print("Run Error:", str(e))
+            print("false")
+            continue
 
         # get correct answer
         answer_path = answer_folder_path + str(test_index) + ".out"
