@@ -1,0 +1,59 @@
+{
+    "Message_Passing": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Statistics": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Fruit_Pile": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "The_Worm-eaten_Formula_Puzzle": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Pave_the_Road": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Divert_water_into_the_city": {
+        "test_num": 10,
+        "correct_num": 3
+    },
+    "FBI_Tree": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Spinning_Game": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Hopscotch": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Flappy_Bird": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Symmetric_Binary_Tree": {
+        "test_num": 25,
+        "correct_num": 9
+    },
+    "Travel_By_Car": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Huarong_Road": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Currency_System": {
+        "test_num": 20,
+        "correct_num": 0
+    }
+}
