@@ -23,9 +23,6 @@ test_num_sum = 0
 correct_num_sum = 0
 pass_all_test_num = 0
 for d in os.listdir(asac_path):
-    if pass_all_test_num > 3:
-        break
-
     # get problem
     original_name = d
     problem_name = d.replace(" ", "_")
