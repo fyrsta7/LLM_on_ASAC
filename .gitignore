@@ -1,2 +1,7 @@
-/ASAC/
-*.txt
+__pycache__/
+ASAC/
+result/
+error.txt
+output.txt
+run.py
+test.py

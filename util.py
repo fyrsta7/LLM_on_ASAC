@@ -1,6 +1,19 @@
 import os
 import subprocess
 
+def create_result_folder(root_path):
+    command = 'cd ' + root_path + '; mkdir -p result; rm -r result/*'
+    process = subprocess.Popen(
+        ['bash', '-c', command],
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+    )
+    _, stderr = process.communicate()
+    if stderr:
+        print('mkdir Error:', stderr)
+
 def check_first_line(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         first_line = file.readline().strip()
@@ -34,8 +47,34 @@ def remove_last_line(file_path):
         file.truncate()  # 删除最后一行
         # 注意：truncate() 将文件截断到当前位置，即文件指针的位置
 
+def compile_program(result_folder_path, problem_name, timeout):
+    command = 'cd ' + result_folder_path + '; g++ -std=c++17 ' + problem_name + '.cpp' + ' -o ' + problem_name
+    print(command)
+    try:
+        process = subprocess.Popen(
+            ['bash', '-c', command],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        _, stderr = process.communicate(timeout = timeout)
+        return stderr
+    
+    except subprocess.TimeoutExpired as e:
+        # Handle the timeout situation
+        process.kill()  # Kill the process if it exceeds the timeout
+        # stdout, stderr = process.communicate()  # Get the output and error streams
+        return "Process timed out"
+    
+    except Exception as e:
+        # Handle any other exceptions
+        return str(e)
+
+
 def count_files_in_directory(directory_path):
     return len([f for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f))])
+
 
 def run_process_with_timeout(program, input_text, timeout):
     try:
@@ -52,15 +91,15 @@ def run_process_with_timeout(program, input_text, timeout):
         process.stdin.flush()
         
         # Communicate with the process and set the timeout
-        stdout, stderr = process.communicate(timeout=timeout)
+        stdout, stderr = process.communicate(timeout = timeout)
         
         return stdout, stderr
     
     except subprocess.TimeoutExpired as e:
         # Handle the timeout situation
         process.kill()  # Kill the process if it exceeds the timeout
-        stdout, stderr = process.communicate()  # Get the output and error streams
-        return None, f"Process timed out: {stderr}"
+        # stdout, stderr = process.communicate()  # Get the output and error streams
+        return None, "Process timed out"
     
     except Exception as e:
         # Handle any other exceptions
