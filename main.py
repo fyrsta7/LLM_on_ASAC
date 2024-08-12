@@ -27,7 +27,7 @@ for d in os.listdir(asac_path):
     # get problem
     original_name = d
     problem_name = d.replace(" ", "_")
-    if problem_name == ".DS_Store":
+    if problem_name == ".DS_Store" or problem_name == ".gitignore" or problem_name == "asacdata.pkl" or problem_name == "evaluate.py":
         continue
     print("problem_name:", problem_name, flush=True)
     problem_folder_path = asac_path + "/" + original_name
@@ -117,8 +117,8 @@ for d in os.listdir(asac_path):
     test_result.append([problem_name, correct_num, test_num])
 
     print("\n")
-    print("There are", test_num, "tests")
-    print("It passes", correct_num, "tests")
+    print("There are", test_num, "tests.")
+    print("It passes", correct_num, "tests.")
     print("\n", flush=True)
 
 print("In all problems, there are", test_num_sum, "tests.")
