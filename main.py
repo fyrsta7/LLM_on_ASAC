@@ -29,7 +29,7 @@ for d in os.listdir(asac_path):
     # get problem
     original_name = d
     problem_name = d.replace(" ", "_")
-    print("problem_name:", problem_name)
+    print("problem_name:", problem_name, flush=True)
     problem_folder_path = asac_path + "/" + original_name
     problem_path = problem_folder_path + "/task_e.md"
     with open(problem_path, 'r', encoding='utf-8') as file:
@@ -64,6 +64,10 @@ for d in os.listdir(asac_path):
         print('Compile Error:', stderr)
 
     # run test
+    exe_program_path = result_folder_path + problem_name
+    if not os.path.isfile(exe_program_path):
+        continue
+
     test_folder_path = problem_folder_path + "/tests/"
     input_folder_path = test_folder_path + "origin_form/"
     answer_folder_path = test_folder_path + "ans/"
@@ -72,7 +76,7 @@ for d in os.listdir(asac_path):
     correct_num = 0
 
     for i in range(1, test_num + 1):
-        print("\ntest", i)
+        print("\ntest", i, flush=True)
         test_index = i
 
         # get input
@@ -81,7 +85,6 @@ for d in os.listdir(asac_path):
             input = file.read()
 
         # run program and get output
-        exe_program_path = result_folder_path + problem_name
         stdout, stderr = run_process_with_timeout(exe_program_path, input, test_timeout)
         if stderr:
             print('Run Error:', stderr)
@@ -108,10 +111,10 @@ for d in os.listdir(asac_path):
         pass_all_test_num += 1
     
     print("\n")
-    print("test_num:", test_num)
-    print("correct_num:", correct_num)
-    print("\n")
+    print("There are", test_num, "tests")
+    print("It passes", correct_num, "tests")
+    print("\n", flush=True)
 
-print("There are", test_num_sum, "tests.")
+print("In all problems, there are", test_num_sum, "tests.")
 print("It passes", correct_num_sum, "tests.")
-print("It passes all tests in", pass_all_test_num, "problems.")
+print("It passes all tests in", pass_all_test_num, "problems.", flush=True)

@@ -2,7 +2,8 @@ import os
 import subprocess
 
 def create_result_folder(root_path):
-    command = 'cd ' + root_path + '; mkdir -p result; rm -r result/*'
+    command = 'cd ' + root_path + '; mkdir -p result'
+    print(command, flush=True)
     process = subprocess.Popen(
         ['bash', '-c', command],
         stdin=subprocess.PIPE,
