@@ -14,13 +14,15 @@
 
 `util.py`: 测试中用到的函数
 
-`cache.py`: 存储结果用到的函数
+`cache.py`: 用于操作缓存的函数
+
+`statistic.py`: 用于统计结果
 
 `result/`: 测试过程中大模型生成的程序，以及从程序中编译得到的可执行文件
 
-`cache/*.json`: 存储的测试结果
+`cache/*.json`: 测试结果的缓存
 
-`cache/*_bk*.json`: 备份的之前测试的结果
+`result_backup`: 测试结果的备份
 
 
 ## 使用说明
