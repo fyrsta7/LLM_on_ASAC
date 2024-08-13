@@ -98,6 +98,7 @@ for d in os.listdir(asac_path):
         cache[problem_name] = {"test_num": test_num, "correct_num": correct_num, "error": "no exe"}
         save_cache(cache_path, cache, is_cover)
         is_cover = True
+        print("\n", flush=True)
         continue
 
     for i in range(1, test_num + 1):
@@ -146,7 +147,7 @@ for d in os.listdir(asac_path):
 
     print("\n")
     print("There are", test_num, "tests.")
-    print("It passes", correct_num, "tests.")
+    print("It passed", correct_num, "tests.")
     print("\n", flush=True)
 
     cache[problem_name] = {"test_num": test_num, "correct_num": correct_num}
@@ -155,8 +156,8 @@ for d in os.listdir(asac_path):
         is_cover = True
 
 print("In all problems, there are", test_num_sum, "tests.")
-print("It passes", correct_num_sum, "tests.")
-print("It passes all tests in", pass_all_test_num, "problems.", flush=True)
+print("It passed", correct_num_sum, "tests.")
+print("It passed all tests in", pass_all_test_num, "problems.", flush=True)
 
 cache["test_num_sum"] = test_num_sum
 cache["correct_num_sum"] = correct_num_sum
