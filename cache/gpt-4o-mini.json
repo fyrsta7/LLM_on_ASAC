@@ -562,7 +562,7 @@
         "test_num": 10,
         "correct_num": 10
     },
-    "test_num_sum": 1570,
+    "test_num_sum": 1560,
     "correct_num_sum": 488,
     "pass_all_test_num": 34
 }

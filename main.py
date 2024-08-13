@@ -38,9 +38,11 @@ for d in os.listdir(asac_path):
 
     if problem_name in cache:
         print("already have result in cache, continue\n")
-        test_num_sum += cache[problem_name]["test_num"]
-        correct_num_sum += cache[problem_name]["correct_num"]
-        if cache[problem_name]["test_num"] == cache[problem_name]["correct_num"]:
+        test_num = cache[problem_name]["test_num"]
+        correct_num = cache[problem_name]["correct_num"]
+        test_num_sum += test_num
+        correct_num_sum += correct_num
+        if test_num == correct_num:
             pass_all_test_num += 1
         continue
 
@@ -85,7 +87,6 @@ for d in os.listdir(asac_path):
     input_folder_path = test_folder_path + "origin_form/"
     answer_folder_path = test_folder_path + "ans/"
     test_num = count_files_in_directory(input_folder_path)
-    test_num_sum += test_num
     correct_num = 0
 
     # if there is no executable file, continue
@@ -138,6 +139,7 @@ for d in os.listdir(asac_path):
         else:
             print("false")
 
+    test_num_sum += test_num
     correct_num_sum += correct_num
     if test_num == correct_num:
         pass_all_test_num += 1
