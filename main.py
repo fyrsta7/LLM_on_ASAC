@@ -7,8 +7,8 @@ from util import *
 from cache import *
 
 client = OpenAI(
-    base_url = o1_mini_base_url,
-    api_key = o1_mini_api_key,
+    base_url = deepseek_base_url,
+    api_key = deepseek_api_key,
 )
 compile_timeout = 5
 test_timeout = 2
@@ -19,7 +19,7 @@ file_path = os.path.abspath(__file__)
 root_path = os.path.dirname(file_path)
 create_result_folder(root_path)
 result_folder_path = root_path + "/result/"
-cache_path = root_path + "/cache/o1-mini.json"
+cache_path = root_path + "/cache/deepseek-coder.json"
 
 test_num_sum = 0
 correct_num_sum = 0
@@ -57,7 +57,7 @@ for d in os.listdir(asac_path):
     cpp_program_path = result_folder_path + problem_name + ".cpp"
     if not os.path.isfile(cpp_program_path):
         response = client.chat.completions.create(
-            model = o1_mini_model,
+            model = deepseek_model,
             messages = [
                 {
                     "role": "user",

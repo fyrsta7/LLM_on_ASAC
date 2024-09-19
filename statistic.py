@@ -3,7 +3,7 @@ from config import *
 from util import *
 from cache import *
 
-cache_path = "/Users/zhaoyuwei/Desktop/LLM_on_ASAC/cache/deepseek-coder.json"
+cache_path = "/Users/zhaoyuwei/Desktop/ky/LLM_on_OI/LLM_on_ASAC/cache/deepseek-coder.json"
 cache = load_cache(cache_path)
 test_num_sum = 0
 correct_num_sum = 0
@@ -11,6 +11,8 @@ pass_all_test_num = 0
 
 for d in os.listdir(asac_path):
     problem_name = d.replace(" ", "_")
+    problem_name = problem_name.replace("’", "")
+    problem_name = problem_name.replace("'", "")
     if problem_name == ".DS_Store" or problem_name == ".gitignore" or problem_name == "asacdata.pkl" or problem_name == "evaluate.py" or problem_name == "README.md":
         continue
 
