@@ -27,6 +27,8 @@
 
 ## 使用说明
 
+### 环境配置
+
 需要提前下载 ASAC benchmark: https://github.com/AuQWQuA/ASAC
 
 需要安装 ChatGPT API 的库:
@@ -34,22 +36,27 @@
 $ pip install openai
 ```
 
+### 需要修改的内容
+
 `result` 文件夹中若包含之前生成的结果，需要提前清空，避免之前测试的结果影响本次测试。
 
-运行前需要在 `config.py` 中补全的内容：
+`config.py` 中必须补全的内容：
 1. `*_base_url`: 大模型的 base URL
 2. `*_api_key`: 大模型的 API key
 3. `*_model`: 所选择的 model
 4. `asac_path`: ASAC benchmark 文件夹的路径
 
-例如目前使用 DeepSeek 的 API，在 `main.py` 中就会使用 `deepseek_base_url`, `deepseek_api_key`, `deepseek_model` 这三个变量。如果需要切换到其他大模型的 API，可以在 `main.py` 改为使用其他大模型对应的上述三个变量。
+`main.py` 中必须修改的内容：
+1. `cache_path`: 存储当前实验结果的文件路径
+2. 实验使用的模型对应的变量：例如目前使用 DeepSeek 的 API，在 `main.py` 中就会使用 `deepseek_base_url`, `deepseek_api_key`, `deepseek_model` 这三个变量。如果需要切换到其他大模型的 API，可以在 `main.py` 改为使用其他大模型对应的上述三个变量。
 
 `main.py` 中可以修改的设置：
 1. `compile_timeout`: 编译的时长上限，单位为秒
 2. `test_timeout`: 运行测试的时长上限，单位为秒
 3. `prompt`: 大模型输入中开头的 prompt。大模型输入的具体构成形式: prompt + problem description
 
-运行方式：
+### 运行方式
+
 ```
 $ python3 main.py
 ```

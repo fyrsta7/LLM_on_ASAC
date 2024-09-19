@@ -1,6 +1,8 @@
 __pycache__/
 .DS_Store/
 ASAC/
+ASAC-old/
+oi-main/
 result/
 tmp/
 error.txt
