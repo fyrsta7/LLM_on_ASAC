@@ -116,10 +116,6 @@
         "test_num": 10,
         "correct_num": 0
     },
-    "Division": {
-        "test_num": 25,
-        "correct_num": 1
-    },
     "Jinjins_Savings_Plan": {
         "test_num": 10,
         "correct_num": 2
@@ -135,10 +131,6 @@
     "Prime_Factorization": {
         "test_num": 10,
         "correct_num": 10
-    },
-    "Harbor": {
-        "test_num": 20,
-        "correct_num": 14
     },
     "Number-Filling_Game": {
         "test_num": 20,
@@ -252,10 +244,6 @@
         "test_num": 25,
         "correct_num": 2
     },
-    "Magic_Square": {
-        "test_num": 10,
-        "correct_num": 10
-    },
     "Across_the_river": {
         "test_num": 10,
         "correct_num": 1
@@ -295,11 +283,6 @@
     "Martian": {
         "test_num": 10,
         "correct_num": 0
-    },
-    "Todays_Meal_at_Emiyas_House": {
-        "test_num": 25,
-        "correct_num": 0,
-        "error": "no exe"
     },
     "Love_Running_Every_Day": {
         "test_num": 20,
@@ -386,10 +369,6 @@
         "test_num": 10,
         "correct_num": 0,
         "error": "no exe"
-    },
-    "Shipping_Plan": {
-        "test_num": 20,
-        "correct_num": 1
     },
     "Prisoners": {
         "test_num": 10,
@@ -524,10 +503,6 @@
         "test_num": 10,
         "correct_num": 1
     },
-    "Travel": {
-        "test_num": 25,
-        "correct_num": 0
-    },
     "Taotao_Picking_Apple": {
         "test_num": 10,
         "correct_num": 10
@@ -553,7 +528,36 @@
         "test_num": 10,
         "correct_num": 10
     },
-    "test_num_sum": 1775,
+    "Division": {
+        "test_num": 22,
+        "correct_num": 1
+    },
+    "Harbor": {
+        "test_num": 20,
+        "correct_num": 14
+    },
+    "Magic_Square": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "The_Vigen\u00e8re_Code": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Todays_Meal_at_Emiyas_House": {
+        "test_num": 25,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Shipping_Plan": {
+        "test_num": 20,
+        "correct_num": 1
+    },
+    "Travel": {
+        "test_num": 25,
+        "correct_num": 0
+    },
+    "test_num_sum": 1772,
     "correct_num_sum": 527,
     "pass_all_test_num": 33
 }

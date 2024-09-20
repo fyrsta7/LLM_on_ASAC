@@ -43,11 +43,6 @@
         "test_num": 25,
         "correct_num": 1
     },
-    "Travel_By_Car": {
-        "test_num": 20,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Huarong_Road": {
         "test_num": 20,
         "correct_num": 12
@@ -117,10 +112,6 @@
         "correct_num": 0,
         "error": "no exe"
     },
-    "Division": {
-        "test_num": 25,
-        "correct_num": 1
-    },
     "The_Happy_Jinming": {
         "test_num": 10,
         "correct_num": 0,
@@ -133,10 +124,6 @@
     "Prime_Factorization": {
         "test_num": 10,
         "correct_num": 10
-    },
-    "Harbor": {
-        "test_num": 20,
-        "correct_num": 20
     },
     "Number-Filling_Game": {
         "test_num": 20,
@@ -363,11 +350,6 @@
         "test_num": 10,
         "correct_num": 2
     },
-    "Shipping_Plan": {
-        "test_num": 20,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Prisoners": {
         "test_num": 10,
         "correct_num": 1
@@ -467,10 +449,6 @@
         "test_num": 10,
         "correct_num": 10
     },
-    "Magic_Circle": {
-        "test_num": 20,
-        "correct_num": 0
-    },
     "Toy_Puzzle": {
         "test_num": 20,
         "correct_num": 0,
@@ -528,11 +506,6 @@
         "test_num": 10,
         "correct_num": 0
     },
-    "Todays_Meal_at_Emiyas_House": {
-        "test_num": 25,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Kats_doubts": {
         "test_num": 10,
         "correct_num": 6
@@ -553,7 +526,38 @@
         "test_num": 10,
         "correct_num": 0
     },
-    "test_num_sum": 1775,
+    "Travel_By_Car": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Division": {
+        "test_num": 22,
+        "correct_num": 1
+    },
+    "Harbor": {
+        "test_num": 20,
+        "correct_num": 20
+    },
+    "The_Vigen\u00e8re_Code": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Todays_Meal_at_Emiyas_House": {
+        "test_num": 25,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Shipping_Plan": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Magic_Circle": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "test_num_sum": 1772,
     "correct_num_sum": 677,
     "pass_all_test_num": 48
 }

@@ -33,7 +33,7 @@ for d in os.listdir(asac_path):
     problem_name = problem_name.replace("’", "")
     problem_name = problem_name.replace("'", "")
 
-    if problem_name == ".DS_Store" or problem_name == ".gitignore" or problem_name == "asacdata.pkl" or problem_name == "evaluate.py" or problem_name == "README.md":
+    if problem_name == ".DS_Store" or problem_name == ".gitignore" or problem_name == ".git" or problem_name == "asacdata.pkl" or problem_name == "evaluate.py" or problem_name == "README.md":
         continue
 
     print("problem_name:", problem_name, flush=True)
