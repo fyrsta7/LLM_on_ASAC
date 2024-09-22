@@ -608,4 +608,4 @@ def run_o1_mini():
 # run_deepseek()
 # run_4o()
 # run_4o_mini()
-# run_o1_mini()
+run_o1_mini()

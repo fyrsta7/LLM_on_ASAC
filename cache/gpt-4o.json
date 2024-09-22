@@ -107,16 +107,6 @@
         "test_num": 10,
         "correct_num": 10
     },
-    "The_Center_of_Gravity_of_the_Tree": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
-    },
-    "The_Happy_Jinming": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Building_Block_Competition": {
         "test_num": 10,
         "correct_num": 10
@@ -200,11 +190,6 @@
     "Combinatorial\u00a0Number_Problem": {
         "test_num": 20,
         "correct_num": 10
-    },
-    "Track_Construction": {
-        "test_num": 20,
-        "correct_num": 0,
-        "error": "no exe"
     },
     "The_Core_of_the_Tree_Network": {
         "test_num": 10,
@@ -386,11 +371,6 @@
         "test_num": 10,
         "correct_num": 2
     },
-    "Public_Transport_Transfer": {
-        "test_num": 20,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "The_Game_of_Ball_Passing": {
         "test_num": 10,
         "correct_num": 10
@@ -431,28 +411,13 @@
         "test_num": 10,
         "correct_num": 0
     },
-    "Change_Classrooms": {
-        "test_num": 25,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Angry_Birds": {
         "test_num": 20,
         "correct_num": 1
     },
-    "The_Lurker": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Placing_Flowers": {
         "test_num": 10,
         "correct_num": 10
-    },
-    "Toy_Puzzle": {
-        "test_num": 20,
-        "correct_num": 0,
-        "error": "no exe"
     },
     "Word_Count": {
         "test_num": 10,
@@ -526,11 +491,6 @@
         "test_num": 10,
         "correct_num": 0
     },
-    "Travel_By_Car": {
-        "test_num": 20,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Division": {
         "test_num": 22,
         "correct_num": 1
@@ -543,6 +503,30 @@
         "test_num": 10,
         "correct_num": 10
     },
+    "Magic_Circle": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Travel_By_Car": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "The_Center_of_Gravity_of_the_Tree": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "The_Happy_Jinming": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Track_Construction": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
+    },
     "Todays_Meal_at_Emiyas_House": {
         "test_num": 25,
         "correct_num": 0,
@@ -553,9 +537,25 @@
         "correct_num": 0,
         "error": "no exe"
     },
-    "Magic_Circle": {
+    "Public_Transport_Transfer": {
         "test_num": 20,
-        "correct_num": 0
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Change_Classrooms": {
+        "test_num": 25,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "The_Lurker": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Toy_Puzzle": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
     },
     "test_num_sum": 1772,
     "correct_num_sum": 677,

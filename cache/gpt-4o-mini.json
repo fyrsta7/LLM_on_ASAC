@@ -31,11 +31,6 @@
         "test_num": 10,
         "correct_num": 0
     },
-    "Hopscotch": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Flappy_Bird": {
         "test_num": 20,
         "correct_num": 0
@@ -136,11 +131,6 @@
         "test_num": 20,
         "correct_num": 0
     },
-    "Checkerboard": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Scholarship": {
         "test_num": 10,
         "correct_num": 10
@@ -148,11 +138,6 @@
     "The_Librarian": {
         "test_num": 10,
         "correct_num": 10
-    },
-    "Palindrome_Dates": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
     },
     "Gathering_herbs": {
         "test_num": 10,
@@ -178,11 +163,6 @@
         "test_num": 20,
         "correct_num": 0
     },
-    "Numbers_on_the_Tree": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "The_Number_Game": {
         "test_num": 20,
         "correct_num": 20
@@ -198,11 +178,6 @@
     "2k_System_of_Numeration": {
         "test_num": 10,
         "correct_num": 0
-    },
-    "Epidemic_Control": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
     },
     "Campfire_Party": {
         "test_num": 10,
@@ -348,11 +323,6 @@
         "test_num": 10,
         "correct_num": 1
     },
-    "Target-shaped_Sudoku": {
-        "test_num": 20,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Mingmings_Random_Number": {
         "test_num": 10,
         "correct_num": 0
@@ -364,11 +334,6 @@
     "Road_Game": {
         "test_num": 20,
         "correct_num": 0
-    },
-    "The_Escape_of_the_Watchman": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
     },
     "Prisoners": {
         "test_num": 10,
@@ -458,11 +423,6 @@
         "test_num": 10,
         "correct_num": 0
     },
-    "Change_Classrooms": {
-        "test_num": 25,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Angry_Birds": {
         "test_num": 20,
         "correct_num": 0
@@ -511,11 +471,6 @@
         "test_num": 10,
         "correct_num": 10
     },
-    "Calculate_the_coefficients": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Buying_Pencils": {
         "test_num": 20,
         "correct_num": 20
@@ -544,11 +499,6 @@
         "test_num": 10,
         "correct_num": 0
     },
-    "Todays_Meal_at_Emiyas_House": {
-        "test_num": 25,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Shipping_Plan": {
         "test_num": 20,
         "correct_num": 1
@@ -556,6 +506,56 @@
     "Travel": {
         "test_num": 25,
         "correct_num": 0
+    },
+    "Hopscotch": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Checkerboard": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Palindrome_Dates": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Numbers_on_the_Tree": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Epidemic_Control": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Todays_Meal_at_Emiyas_House": {
+        "test_num": 25,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Target-shaped_Sudoku": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "The_Escape_of_the_Watchman": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Change_Classrooms": {
+        "test_num": 25,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Calculate_the_coefficients": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
     },
     "test_num_sum": 1772,
     "correct_num_sum": 527,

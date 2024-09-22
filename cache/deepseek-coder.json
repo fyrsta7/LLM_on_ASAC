@@ -87,11 +87,6 @@
         "test_num": 20,
         "correct_num": 0
     },
-    "Cultural_Journey": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Machining\u00a0Parts": {
         "test_num": 20,
         "correct_num": 4
@@ -107,11 +102,6 @@
     "Abacus_Mental_Arithmetic_Test": {
         "test_num": 10,
         "correct_num": 10
-    },
-    "The_Center_of_Gravity_of_the_Tree": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
     },
     "The_Happy_Jinming": {
         "test_num": 10,
@@ -188,11 +178,6 @@
     "2k_System_of_Numeration": {
         "test_num": 10,
         "correct_num": 0
-    },
-    "Epidemic_Control": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
     },
     "Campfire_Party": {
         "test_num": 10,
@@ -506,11 +491,6 @@
         "test_num": 10,
         "correct_num": 10
     },
-    "Jinmings_Budget_Plan": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Hanksons_Interesting_Question": {
         "test_num": 10,
         "correct_num": 10
@@ -550,6 +530,26 @@
     "Magic_Circle": {
         "test_num": 20,
         "correct_num": 0
+    },
+    "Cultural_Journey": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "The_Center_of_Gravity_of_the_Tree": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Epidemic_Control": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Jinmings_Budget_Plan": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
     },
     "test_num_sum": 1772,
     "correct_num_sum": 755,

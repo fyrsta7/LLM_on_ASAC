@@ -35,11 +35,6 @@
         "test_num": 10,
         "correct_num": 5
     },
-    "Flappy_Bird": {
-        "test_num": 20,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Symmetric_Binary_Tree": {
         "test_num": 25,
         "correct_num": 12
@@ -332,11 +327,6 @@
         "test_num": 10,
         "correct_num": 10
     },
-    "Target-shaped_Sudoku": {
-        "test_num": 20,
-        "correct_num": 0,
-        "error": "no exe"
-    },
     "Sightseeing_bus": {
         "test_num": 20,
         "correct_num": 2
@@ -412,11 +402,6 @@
     "The_Value_of_Expression": {
         "test_num": 10,
         "correct_num": 3
-    },
-    "Simplifying_Proportion": {
-        "test_num": 10,
-        "correct_num": 0,
-        "error": "no exe"
     },
     "Title_Statistics": {
         "test_num": 20,
@@ -549,6 +534,21 @@
     "Magic_Circle": {
         "test_num": 20,
         "correct_num": 17
+    },
+    "Flappy_Bird": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Target-shaped_Sudoku": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Simplifying_Proportion": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
     },
     "test_num_sum": 1772,
     "correct_num_sum": 1110,
