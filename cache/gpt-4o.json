@@ -1,3 +1,81 @@
 {
-    
+    "Campfire_Party": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "The_Number_Game": {
+        "test_num": 20,
+        "correct_num": 20
+    },
+    "The_Core_of_the_Tree_Network": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "The_Game_of_Ball_Passing": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Palindrome_Dates": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Sightseeing_bus": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Swiss_System": {
+        "test_num": 10,
+        "correct_num": 8
+    },
+    "Trucking": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Delimit_the_Minimum_Passing_Score": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Sequence": {
+        "test_num": 10,
+        "correct_num": 9
+    },
+    "Stupid_Little_Monkey": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Treasure_Hunt": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Sum": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Helix_Matrix": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Shipping_Plan": {
+        "test_num": 20,
+        "correct_num": 1
+    },
+    "Machining\u00a0Parts": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Road_Game": {
+        "test_num": 20,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Building_Block_Competition": {
+        "test_num": 10,
+        "correct_num": 8
+    },
+    "Kats_doubts": {
+        "test_num": 10,
+        "correct_num": 3
+    }
 }

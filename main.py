@@ -7,8 +7,8 @@ from util import *
 from cache import *
 
 client = OpenAI(
-    base_url = deepseek_base_url,
-    api_key = deepseek_api_key,
+    base_url = chatgpt_base_url,
+    api_key = chatgpt_api_key,
 )
 compile_timeout = 5
 test_timeout = 2
@@ -25,7 +25,7 @@ result_folder_path = root_path + "/result/"
 # create result folder 
 create_result_folder(root_path)
 # path of cache, used to store test result
-cache_path = root_path + "/cache/deepseek-coder.json"
+cache_path = root_path + "/cache/gpt-4o.json"
 
 test_num_sum = 0
 correct_num_sum = 0
@@ -64,7 +64,7 @@ for d in os.listdir(asac_path):
     if not os.path.isfile(cpp_program_path):
         # print("the content is: ", prompt + content)
         response = client.chat.completions.create(
-            model = deepseek_model,
+            model = chatgpt_model,
             messages = [
                 {
                     "role": "user",
