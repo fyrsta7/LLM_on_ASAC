@@ -48,7 +48,7 @@ $ pip install openai
 1. `*_base_url`: 大模型的 base URL
 2. `*_api_key`: 大模型的 API key
 3. `*_model`: 所选择的 model
-4. `asac_path`: ASAC benchmark 文件夹的路径
+4. `root_path`: 本项目所在文件夹的路径
 
 `main.py` 中必须修改的内容：
 1. `cache_path`: 存储当前实验结果的文件路径

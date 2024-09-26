@@ -13,14 +13,18 @@ client = OpenAI(
 compile_timeout = 5
 test_timeout = 2
 # prompt = "Here is an algorithm competition problem. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. Don't use the bits/stdc++.h library. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format."
-prompt = "Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format."
-benchmark_file_name = "task_e_without_annotation.md"
+prompt = "Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. \n\n"
+benchmark_file_name = "task_e_without_annotation.mzn"
 
-# create result folder, used to store .cpp and executable file
-file_path = os.path.abspath(__file__)
-root_path = os.path.dirname(file_path)
-create_result_folder(root_path)
+# path of problem folder, the path of problem description would be <problem_root_path/problem_name/benchmark_file_name>
+problem_root_path = asac_without_annotation_path
+# path of test folder, the path of test file would be <test_root_path/problem_name/tests>
+test_root_path = asac_path
+# path of result folder, used to store .cpp and executable file
 result_folder_path = root_path + "/result/"
+# create result folder 
+create_result_folder(root_path)
+# path of cache, used to store test result
 cache_path = root_path + "/cache/deepseek-coder.json"
 
 test_num_sum = 0
@@ -50,7 +54,7 @@ for d in os.listdir(asac_path):
             pass_all_test_num += 1
         continue
 
-    problem_folder_path = asac_path + "/" + original_name
+    problem_folder_path = problem_root_path + "/" + original_name
     problem_path = problem_folder_path + "/" + benchmark_file_name
     with open(problem_path, 'r', encoding='utf-8') as file:
         content = file.read()
@@ -58,6 +62,7 @@ for d in os.listdir(asac_path):
     # get program from LLM
     cpp_program_path = result_folder_path + problem_name + ".cpp"
     if not os.path.isfile(cpp_program_path):
+        # print("the content is: ", prompt + content)
         response = client.chat.completions.create(
             model = deepseek_model,
             messages = [
@@ -87,7 +92,7 @@ for d in os.listdir(asac_path):
     print("compile done", flush=True)
     
     # run test
-    test_folder_path = problem_folder_path + "/tests/"
+    test_folder_path = test_root_path + "/" + original_name + "/tests/"
     input_folder_path = test_folder_path + "origin_form/"
     answer_folder_path = test_folder_path + "ans/"
     test_num = count_files_in_directory(input_folder_path)
