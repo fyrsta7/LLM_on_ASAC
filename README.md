@@ -10,6 +10,8 @@
 
 `main.py`: 用于运行的脚本
 
+`main_multi.py`: 用于运行的脚本，区别是同一个 benchmark 可以反复运行并找到最优的结果
+
 `config.py`: 运行相关变量，例如大模型的 API key 等
 
 `util.py`: 测试中用到的函数

@@ -10,6 +10,6 @@ o1_mini_base_url = "https://api.openai-proxy.org/v1"
 o1_mini_api_key = "sk-9jrzFYYu9nfTjicvbNl1N6U002SIzD6FylcZF30uiYhlEwNR"
 o1_mini_model = "o1-mini-2024-09-12"
 
-root_path = "/home/jiry/zyw/LLM_on_ASAC"
+root_path = "/Users/zhaoyuwei/Desktop/ky/LLM_on_OI/LLM_on_ASAC"
 asac_path = root_path + "/ASAC"
 asac_without_annotation_path = root_path + "/ASAC_without_annotation"
