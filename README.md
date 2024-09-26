@@ -28,6 +28,8 @@
 
 `result_backup`: 测试结果的备份
 
+`result.md`: 测试结果的汇总
+
 
 ## 使用说明
 
