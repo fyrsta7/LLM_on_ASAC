@@ -12,7 +12,9 @@ client = OpenAI(
 )
 compile_timeout = 5
 test_timeout = 2
-prompt = "Here is an algorithm competition problem. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. Don't use the bits/stdc++.h library. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format."
+# prompt = "Here is an algorithm competition problem. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. Don't use the bits/stdc++.h library. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format."
+prompt = "Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format."
+benchmark_file_name = "task_e_without_annotation.md"
 
 # create result folder, used to store .cpp and executable file
 file_path = os.path.abspath(__file__)
@@ -49,7 +51,7 @@ for d in os.listdir(asac_path):
         continue
 
     problem_folder_path = asac_path + "/" + original_name
-    problem_path = problem_folder_path + "/task_e.md"
+    problem_path = problem_folder_path + "/" + benchmark_file_name
     with open(problem_path, 'r', encoding='utf-8') as file:
         content = file.read()
 

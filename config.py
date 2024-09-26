@@ -1,13 +1,13 @@
 chatgpt_base_url = "https://api.openai-proxy.org/v1"
-chatgpt_api_key = "sk-4DremFH2GNmW6PaOpr7PCFlTPLgO0D37pj6BuzukXFR63EVP"
+chatgpt_api_key = "sk-9jrzFYYu9nfTjicvbNl1N6U002SIzD6FylcZF30uiYhlEwNR"
 chatgpt_model = "gpt-4o"
 
 deepseek_base_url = "https://api.deepseek.com"
-deepseek_api_key = "sk-0beb43f7f98442ada530cc209da8f665"
+deepseek_api_key = "sk-c1be5c9782094c789c6b0a5884265af6"
 deepseek_model = "deepseek-coder"
 
 o1_mini_base_url = "https://api.openai-proxy.org/v1"
-o1_mini_api_key = "sk-4DremFH2GNmW6PaOpr7PCFlTPLgO0D37pj6BuzukXFR63EVP"
+o1_mini_api_key = "sk-9jrzFYYu9nfTjicvbNl1N6U002SIzD6FylcZF30uiYhlEwNR"
 o1_mini_model = "o1-mini-2024-09-12"
 
 

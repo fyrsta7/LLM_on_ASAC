@@ -20,6 +20,8 @@
 
 `statistic.py`: 用于统计结果
 
+`delete_mzn_annotation.py`: 用于删除 MiniZinc 文件中的注释
+
 `result/`: 测试过程中大模型生成的程序，以及从程序中编译得到的可执行文件
 
 `cache/*.json`: 测试结果的缓存
@@ -56,6 +58,7 @@ $ pip install openai
 1. `compile_timeout`: 编译的时长上限，单位为秒
 2. `test_timeout`: 运行测试的时长上限，单位为秒
 3. `prompt`: 大模型输入中开头的 prompt。大模型输入的具体构成形式: prompt + problem description
+4. `benchmark_file_name`: 大模型输入中 problem description 对应的文件名。例如在 ASAC 中可能是 `task_e.md` 或 `task_e.mzn` 等。
 
 ### 运行方式
 
