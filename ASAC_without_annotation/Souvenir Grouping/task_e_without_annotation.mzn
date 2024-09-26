@@ -1,0 +1,13 @@
+int: w;
+int: n;
+array[1..n] of int: P;
+array[1..n] of var 1..n: setIndex;
+array[1..n] of var int: weight;
+array[1..n] of var int: num;
+weight = [sum([P[j] | j in 1..n where setIndex[j] == i]) | i in 1..n];
+num = [sum([1 | j in 1..n where setIndex[j] == i]) | i in 1..n];
+var int: object = sum([1 | number in num where number > 0]);
+constraint forall(number in num)(number <= 2);
+constraint forall(mass in weight)(mass <= w);
+solve minimize object;
+output["\(object)"];

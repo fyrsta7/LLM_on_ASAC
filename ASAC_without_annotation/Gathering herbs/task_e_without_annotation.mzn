@@ -1,0 +1,11 @@
+int: T;
+int: M;
+array[1..M, 1..2] of int: herb;
+array[1..M] of var 0..1: index;
+var int: total;
+var int: cost;
+total = sum([herb[j, 2] * index[j] | j in 1..M ]);
+cost = sum([herb[j, 1] * index[j] | j in 1..M ]);
+constraint cost <= T;
+solve maximize total;
+output[show(total)];

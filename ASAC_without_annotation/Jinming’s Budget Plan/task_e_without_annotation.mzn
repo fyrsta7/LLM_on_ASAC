@@ -1,0 +1,10 @@
+int: N;
+int: m;
+array[1..m,1..3] of int: items;
+array[1..m] of var 0..1: choose;
+var int: ans;
+constraint forall(i in 1..m)(if choose[i]=1 then (if items[i,3]!=0 then choose[items[i,3]]=1 endif) endif);
+constraint sum([if choose[i]=1 then items[i,1] else 0 endif | i in 1..m]) <= N;
+constraint ans=sum([if choose[i]=1 then items[i,1] * items[i,2] else 0 endif | i in 1..m]);
+solve maximize ans;
+output["\(ans)"];

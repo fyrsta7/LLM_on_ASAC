@@ -12,3 +12,4 @@ o1_mini_model = "o1-mini-2024-09-12"
 
 
 asac_path = "/Users/zhaoyuwei/Desktop/ky/LLM_on_OI/LLM_on_ASAC/ASAC"
+asac_without_annotation_path = "/Users/zhaoyuwei/Desktop/ky/LLM_on_OI/LLM_on_ASAC/ASAC_without_annotation"

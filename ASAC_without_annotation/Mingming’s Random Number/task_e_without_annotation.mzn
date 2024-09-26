@@ -1,0 +1,12 @@
+int: n;
+array[1..n] of int: random;
+var set of 1..1000: random_set;
+var 1..n: num;
+constraint random_set = array2set(random);
+constraint num = card(random_set);
+array[0..n] of var int: out;
+constraint forall(i in 1..num)(out[i] in random_set);
+constraint forall(i in 1..num-1)(out[i] < out[i+1]);
+solve satisfy;
+output[show(num) ++ "\n"];
+output["\(out[i]) " | i in 1..fix(num)];

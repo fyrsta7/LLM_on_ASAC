@@ -1,0 +1,14 @@
+include "alldifferent.mzn";
+int: N;
+int: M;
+array[1..N] of int: score;
+array[1..M] of int: cards;
+array[1..M] of var 1..M: order;
+array[1..M+1] of var 1..N: stay;
+var int: total_score;
+constraint alldifferent(order);
+constraint stay[1] = 1 /\ stay[M+1] = N;
+constraint forall(i in 1..M)(stay[i+1] = stay[i] + cards[order[i]]);
+constraint total_score = sum([score[stay[i]] | i in 1..M+1]);
+solve maximize total_score;
+output [show(total_score)];

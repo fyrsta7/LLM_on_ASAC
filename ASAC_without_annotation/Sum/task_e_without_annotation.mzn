@@ -1,0 +1,11 @@
+int: n;
+int: m;
+array[1..n] of int: color;
+array[1..n] of int: number;
+var int: total;
+var int: res;
+constraint total == sum(i in 1..n) (sum(j in i+1..n) (sum(k in j+1..n) (if color[i] == color[k] /\ k-j==j-i then (i+k)*(number[i]+number[k]) else 0 endif)));
+constraint 0 <= res /\ res <= 10006;
+constraint (total - res) mod 10007 == 0;
+solve satisfy;
+output ["\(res)"];

@@ -1,0 +1,11 @@
+int: N;
+int: m1;
+int: m2;
+array[1..N] of int: S;
+int: max_T = 10000;
+int: M = pow(m1, m2);
+array[1..N] of var 1..max_T: time;
+constraint forall(i in 1..N)(time[i] = arg_min(t in 1..max_T)(pow(S[i], t) mod M == 0));
+var int: ans = min(time);
+solve minimize ans;
+output[if fix(ans) == max_T then "-1" else show(fix(ans)) endif];

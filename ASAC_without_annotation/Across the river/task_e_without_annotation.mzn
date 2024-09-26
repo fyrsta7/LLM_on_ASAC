@@ -1,0 +1,15 @@
+int: L;
+int: S;
+int: T;
+int: M;
+array[1..M] of int: stones;
+array[1..L] of var 0..L: steps;
+var 1..L: step_num;
+var int: ans;
+set of int: stone_set = array2set(stones);
+constraint steps[1] = 0;
+constraint steps[step_num] >= L;
+constraint forall(i in 1..step_num-1)(steps[i+1] - steps[i] <= T /\ steps[i+1] - steps[i] >= S);
+constraint ans = card(stone_set intersect array2set(steps));
+solve minimize ans;
+output[show(ans)];

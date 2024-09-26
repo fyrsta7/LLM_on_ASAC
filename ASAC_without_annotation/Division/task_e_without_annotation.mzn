@@ -1,0 +1,14 @@
+int: n;
+array[1..n] of int: a;
+var 0..n-1: part_num;
+array[1..n] of var 1..n: k;
+array[1..n] of var 1..n: begin;
+array[1..n] of var 1..n: end;
+constraint begin[1] = 1 /\ forall(i in 1..part_num)(begin[i+1] = k[i] + 1);
+constraint end[part_num+1] = n /\ forall(i in 1..part_num)(end[i] = k[i]);
+constraint forall(i in 1..part_num-1)(k[i] < k[i+1]) /\ if part_num > 0 then k[part_num] < n endif;
+constraint forall(i in 1..part_num)(sum(j in begin[i]..end[i])(a[j]) <= sum(j in begin[i+1]..end[i+1])(a[j]));
+var int: ans;
+constraint ans = sum(i in 1..part_num+1)(sum(j in begin[i]..end[i])(a[j]) * sum(j in begin[i]..end[i])(a[j]));
+solve minimize ans;
+output[show(ans)];
