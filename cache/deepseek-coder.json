@@ -1,54 +1,176 @@
 {
     "Message_Passing": {
         "test_num": 10,
-        "correct_num": [
-            0,
-            0,
-            0
-        ],
-        "error": [
-            "none",
-            "none",
-            "none"
-        ]
+        "correct_num": 0
     },
     "Statistics": {
         "test_num": 10,
-        "correct_num": [
-            10,
-            10,
-            10
-        ],
-        "error": [
-            "none",
-            "none",
-            "none"
-        ]
+        "correct_num": 10
     },
     "Fruit_Pile": {
         "test_num": 10,
-        "correct_num": [
-            10,
-            10,
-            0
-        ],
-        "error": [
-            "none",
-            "none",
-            "none"
-        ]
+        "correct_num": 10
     },
     "The_Worm-eaten_Formula_Puzzle": {
         "test_num": 10,
-        "correct_num": [
-            0,
-            0,
-            -1
-        ],
-        "error": [
-            "none",
-            "none",
-            ""
-        ]
+        "correct_num": 4
+    },
+    "Pave_the_Road": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Divert_water_into_the_city": {
+        "test_num": 10,
+        "correct_num": 2
+    },
+    "FBI_Tree": {
+        "test_num": 10,
+        "correct_num": 2
+    },
+    "Spinning_Game": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Hopscotch": {
+        "test_num": 10,
+        "correct_num": 2
+    },
+    "Flappy_Bird": {
+        "test_num": 20,
+        "correct_num": 1
+    },
+    "Symmetric_Binary_Tree": {
+        "test_num": 25,
+        "correct_num": 25
+    },
+    "Travel_By_Car": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Huarong_Road": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Currency_System": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Who_got_the_most_scholarships": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Polynomial_Output": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "The_Station_Classification": {
+        "test_num": 10,
+        "correct_num": 1
+    },
+    "Shuffle": {
+        "test_num": 20,
+        "correct_num": 1
+    },
+    "Two_Stack_Sort": {
+        "test_num": 10,
+        "correct_num": 3
+    },
+    "Florist": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Souvenir": {
+        "test_num": 20,
+        "correct_num": 5
+    },
+    "The_Trees_Outside_the_Campus": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Parentheses_Tree": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Cultural_Journey": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Machining\u00a0Parts": {
+        "test_num": 20,
+        "correct_num": 4
+    },
+    "Passing_Notes": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Lay_the_carpet": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Abacus_Mental_Arithmetic_Test": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "The_Center_of_Gravity_of_the_Tree": {
+        "test_num": 10,
+        "correct_num": 0,
+        "error": "no exe"
+    },
+    "Division": {
+        "test_num": 22,
+        "correct_num": 1
+    },
+    "Jinjins_Savings_Plan": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "The_Happy_Jinming": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Building_Block_Competition": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Prime_Factorization": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Harbor": {
+        "test_num": 20,
+        "correct_num": 8
+    },
+    "Number-Filling_Game": {
+        "test_num": 20,
+        "correct_num": 0
+    },
+    "Checkerboard": {
+        "test_num": 10,
+        "correct_num": 0
+    },
+    "Scholarship": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "The_Librarian": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Palindrome_Dates": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Gathering_herbs": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Counting_Numbers": {
+        "test_num": 10,
+        "correct_num": 10
+    },
+    "Jump_Rocks": {
+        "test_num": 10,
+        "correct_num": 3
     }
 }

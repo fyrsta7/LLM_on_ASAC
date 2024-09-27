@@ -1,4 +1,5 @@
 from openai import OpenAI
+from tqdm import tqdm
 import subprocess
 import os
 import sys
@@ -16,7 +17,7 @@ def run_deepseek():
     file_path = os.path.abspath(__file__)
     root_path = os.path.dirname(file_path)
     create_result_folder(root_path)
-    result_folder_path = root_path + "/result_backup/deepseek-coder/"
+    result_folder_path = root_path + "/result_backup/en_md/deepseek-coder/"
     cache_path = root_path + "/cache/deepseek-coder.json"
 
     test_num_sum = 0
@@ -24,7 +25,8 @@ def run_deepseek():
     pass_all_test_num = 0
     cache = load_cache(cache_path)
     is_cover = False
-    for d in os.listdir(asac_path):
+    # for d in os.listdir(asac_path):
+    for d in tqdm(os.listdir(asac_path)):
         # get problem
         original_name = d
         problem_name = d.replace(" ", "_")
@@ -605,7 +607,7 @@ def run_o1_mini():
 
 
 
-# run_deepseek()
+run_deepseek()
 # run_4o()
 # run_4o_mini()
-run_o1_mini()
+# run_o1_mini()
