@@ -30,6 +30,8 @@
 
 `output.csv`: 输出的 csv 格式的测试结果
 
+`ASAC_without_annotation`: 将 ASAC 中 MiniZinc 格式的输入删除了注释之后的结果
+
 `result/`: 测试过程中大模型生成的程序，以及从程序中编译得到的可执行文件
 
 `cache/*.json`: 测试结果的缓存
