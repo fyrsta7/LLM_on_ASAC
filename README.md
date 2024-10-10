@@ -10,7 +10,7 @@
 
 `main.py`: 用于运行的脚本
 
-`main_multi.py`: 用于运行的脚本，区别是同一个 benchmark 可以反复运行并找到最优的结果
+`main_multi.py`: 用于运行的脚本，区别是同一个 benchmark 可以向 LLM 反复询问并找到最优的结果
 
 `config.py`: 运行相关变量，例如大模型的 API key 等
 
@@ -23,6 +23,12 @@
 `statistic.py`: 用于统计结果
 
 `delete_mzn_annotation.py`: 用于删除 MiniZinc 文件中的注释
+
+`delete_non_cpp_file.py`: 用于删除文件夹中除了 cpp 以外文件，主要用于删除 result 文件夹中的可执行文件
+
+`print_to_csv.py`: 将 json 格式的测试结果输出为 csv 格式，便于后续统计和分析
+
+`output.csv`: 输出的 csv 格式的测试结果
 
 `result/`: 测试过程中大模型生成的程序，以及从程序中编译得到的可执行文件
 
