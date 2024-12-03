@@ -1,0 +1,19 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+int: n;
+int: m;
+int: p;
+array[1..n, 1..m] of int: coins;
+array[1..n] of int: cost;
+array[1..m] of var 0..n: strategy;
+array[1..m] of var 0..p: runtime;
+array[1..m] of var 1..n: location;
+var 1..m: pointer;
+var int: benefit;
+constraint forall(i in 1..pointer)(strategy[i] != 0) /\ forall(i in pointer+1..m)(strategy[i] = 0);
+constraint forall(i in 1..pointer)(runtime[i] != 0) /\ forall(i in pointer+1..m)(runtime[i] = 0);
+constraint sum(runtime) = m;
+constraint forall(i in 1..pointer)(forall(j in 1..runtime[i])(location[sum([runtime[k] | k in 1..i-1]) + j] = (strategy[i] - 2 + j) mod n + 1));
+constraint benefit = sum([coins[location[i], i] | i in 1..m]) - sum([cost[strategy[i]] | i in 1..pointer]);
+solve maximize benefit;
+output[show(benefit) ++ "\n"];

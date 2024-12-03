@@ -1,0 +1,8 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+string: numstr;
+int: num_length = string_length(numstr);
+var int: one_num;
+constraint one_num = sum(i in 1..num_length where numstr[i] = "1")(1);
+solve satisfy;
+output ["\(one_num)"];

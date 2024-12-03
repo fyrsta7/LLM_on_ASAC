@@ -1,0 +1,14 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+int: n;
+int: m;
+int: k;
+int: x;
+function var int: move(var int: x) =
+    (x + m) mod n;
+int: rounds = pow(10, k);
+array[0..rounds] of var int: state;
+constraint state[0] = x;
+constraint forall(i in 1..rounds)(state[i] = move(state[i-1]));
+solve satisfy;
+output [show(state[rounds])];

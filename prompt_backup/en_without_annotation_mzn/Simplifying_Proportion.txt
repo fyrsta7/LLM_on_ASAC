@@ -1,0 +1,15 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+int: A;
+int: B;
+int: L;
+predicate mutuality(var int: x, var int: y) =
+let{
+    var int: m = min(x, y);
+} in forall(i in 2..m)(not(x mod i == 0 /\ y mod i == 0));
+var 1..L: A_s;
+var 1..L: B_s;
+constraint A_s/B_s >= A/B;
+constraint mutuality(A_s, B_s);
+solve minimize A_s * B - A * B_s;
+output["\(A_s) \(B_s)"];

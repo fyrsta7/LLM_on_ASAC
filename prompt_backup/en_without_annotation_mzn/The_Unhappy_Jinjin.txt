@@ -1,0 +1,8 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+array[1..7,1..2] of int: time;
+array[1..7] of var bool: unhappy;
+constraint forall(i in 1..7)(unhappy[i]=(time[i,1]+time[i,2]>8));
+var int: longest=arg_max(i in 1..7)(time[i,1]+time[i,2]);
+solve satisfy;
+output[if fix(count(i in 1..7)(unhappy[i]==true))==0 then "0" else "\(longest)" endif];

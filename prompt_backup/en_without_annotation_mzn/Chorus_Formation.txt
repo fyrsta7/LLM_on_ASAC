@@ -1,0 +1,13 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+int: N;
+array[1..N] of int: T;
+array[1..N] of var bool: Select;
+var int: discard_num = sum(Select);
+constraint exists(i in 1..N where Select[i] == false)(
+  forall(j in 1..N, k in 1..N)(
+    (j >= k) \/ Select[j] \/ Select[k] \/ (((k > i) \/ (T[j] < T[k])) /\ ((j < i) \/ (T[j] > T[k])))
+  )
+);
+solve minimize discard_num;
+output ["\(discard_num)"];

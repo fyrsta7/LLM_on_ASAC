@@ -1,0 +1,11 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+int: N;
+array[1..N] of int: T;
+var 1..N: turns;
+var 1..N: x;
+array[0..N] of var int: y;
+constraint y[0] = x /\ y[turns] = x;
+constraint forall(i in 1..turns)(y[i] = T[y[i - 1]]);
+solve minimize turns;
+output["turns=" ++ show(turns)];

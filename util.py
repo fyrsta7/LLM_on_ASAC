@@ -5,7 +5,21 @@ import threading
 
 def create_result_folder(root_path):
     command = 'cd ' + root_path + '; mkdir -p result'
-    print(command, flush=True)
+    # print(command, flush=True)
+    process = subprocess.Popen(
+        ['bash', '-c', command],
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+    )
+    _, stderr = process.communicate()
+    if stderr:
+        print('mkdir Error:', stderr)
+
+def create_prompt_folder(root_path):
+    command = 'cd ' + root_path + '; mkdir -p prompt'
+    # print(command, flush=True)
     process = subprocess.Popen(
         ['bash', '-c', command],
         stdin=subprocess.PIPE,

@@ -1,0 +1,11 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+int: n;
+int: m;
+array[1..m] of int: V;
+array[1..m] of int: P;
+array[1..m] of var 0..1: buy;
+constraint (sum(i in 1..m)(V[i]*buy[i])) <= n;
+var int: obj = (sum(i in 1..m)(V[i]*P[i]*buy[i]));
+solve maximize obj;
+output["\(obj)\n"]

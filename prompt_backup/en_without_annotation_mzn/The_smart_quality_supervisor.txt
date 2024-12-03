@@ -1,0 +1,13 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+int: n;
+int: m;
+int: S;
+array[1..n,1..2] of int: ores;
+array[1..m,1..2] of int: intervals;
+var int: Y;
+var int: W;
+constraint Y=sum(i in 1..m)
+(sum(j in 1..n where ores[j,1]>=W /\ j>=intervals[i,1] /\ j<=intervals[i,2])(1)*sum(j in 1..n where ores[j,1]>=W /\ j>=intervals[i,1] /\ j<=intervals[i,2])(ores[j,2]));
+solve minimize (abs(S-Y));
+output[show(abs(S-Y))];

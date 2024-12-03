@@ -1,0 +1,20 @@
+Here is an algorithm competition problem described in MiniZinc. Please provide a correct C++ program for this problem and ensure that the program's complexity is as low as possible. The answer should include only the C++ program. Don't add explanation outside the program. Don't use markdown format. 
+
+include "alldifferent.mzn";
+int: n;
+int: a;
+int: b;
+array[1..n, 1..2] of int: minister;
+array[0..n, 1..2] of var int: number;
+constraint number[0, 1] = a;
+constraint number[0, 2] = b;
+constraint number[1..n, 1..2] = minister;
+array[0..n] of var 0..n: order;
+constraint order[0] = 0;
+constraint all_different(order);
+array[1..n] of var int: money;
+constraint forall(i in 1..n)(money[i] = product(j in 0..i-1)(number[order[j], 1]) div number[order[i], 2]);
+var int: answer;
+constraint answer = max(i in 1..n)(money[i]);
+solve minimize answer;
+output[show(answer)];
