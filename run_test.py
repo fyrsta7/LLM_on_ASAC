@@ -16,7 +16,6 @@ def run_deepseek():
     # create result folder, used to store .cpp and executable file
     file_path = os.path.abspath(__file__)
     root_path = os.path.dirname(file_path)
-    create_result_folder(root_path)
     result_folder_path = root_path + "/result_backup/en_md/deepseek-coder/"
     cache_path = root_path + "/cache/deepseek-coder.json"
 
@@ -166,7 +165,6 @@ def run_4o():
     # create result folder, used to store .cpp and executable file
     file_path = os.path.abspath(__file__)
     root_path = os.path.dirname(file_path)
-    create_result_folder(root_path)
     result_folder_path = root_path + "/result_backup/gpt-4o/"
     cache_path = root_path + "/cache/gpt-4o.json"
 
@@ -316,7 +314,6 @@ def run_4o_mini():
     # create result folder, used to store .cpp and executable file
     file_path = os.path.abspath(__file__)
     root_path = os.path.dirname(file_path)
-    create_result_folder(root_path)
     result_folder_path = root_path + "/result_backup/gpt-4o-mini/"
     cache_path = root_path + "/cache/gpt-4o-mini.json"
 
@@ -465,8 +462,7 @@ def run_o1_mini():
     # create result folder, used to store .cpp and executable file
     file_path = os.path.abspath(__file__)
     root_path = os.path.dirname(file_path)
-    create_result_folder(root_path)
-    result_folder_path = root_path + "/result_backup/o1-mini/"
+    result_folder_path = root_path + "/result/"
     cache_path = root_path + "/cache/o1-mini.json"
 
     test_num_sum = 0
@@ -607,7 +603,7 @@ def run_o1_mini():
 
 
 
-run_deepseek()
+# run_deepseek()
 # run_4o()
 # run_4o_mini()
-# run_o1_mini()
+run_o1_mini()
